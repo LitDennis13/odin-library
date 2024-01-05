@@ -11,4 +11,7 @@
 2. Added "#mini-info-bar" id in styles.css
 3. Edited index.html file to include "#mini-info-bar" div
 
+### Book Apperance and Storage Commit
+1. Set font in "#login-button" id in styles.css to be consistent with the rest of the pages
+
 
