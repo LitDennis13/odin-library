@@ -7,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template: 2fr .8fr 26fr / 1fr;
+    grid-template: 2fr 1.5fr 26fr / 1fr;
     background-color: rgb(36,41,47);
     color: white;
     font-family: monospace;
@@ -43,10 +43,24 @@ body {
 
 
 
-#mini-info-bar {
+#add-book-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
-    text-align: center;
-    background-color: rgba(108, 23, 23, 0.616);
+    background-color: rgb(108, 23, 23, 0.616);
+}
+#add-book-button {
+    font-size: 1.8rem;
+    width: 30%;
+    height: 60%;
+    font-family: monospace;
+    border: none;
+    border-radius: 5rem;
+    background-color: rgb(150, 23, 253,.75);
+}
+#add-book-button:hover {
+    background-color: rgb(100, 0, 203);
 }
 
 #book-storage {
