@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 2rem;
+    padding: 0rem max(7%, 3rem);
     background-color: rgb(108, 23, 23);
 }
 
@@ -37,4 +37,12 @@ body {
 
 #login-button:hover {
     background-color: rgb(150,256,256,.5)
+}
+
+
+
+#mini-info-bar {
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(108, 23, 23, 0.616);
 }
