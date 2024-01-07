@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Library</title>
+    
 </head>
+
 <body>
     <div id="top-bar">
         <h1 id="title">Library</h1>
@@ -23,5 +25,32 @@
             <button id="book-remove-button">Remove</button>
         </div>
     </div>
+    
+
+    <dialog id="add-book-dialog-container">
+        <h1>Add Book</h1>
+        <form action="#" method="dialog" id="add-book-form">
+            <div id="add-book-title">
+                <label for="book-title">Title</label>
+                <input type="text" id="book-title" name="Book_Title" required>
+            </div>
+            <div id="add-book-author">
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author" name="Book_Author" required>
+            </div>
+            <div id="add-book-pages">
+                <label for="book-pages">Pages</label>
+                <input type="number" min="1" id="book-pages" name="Book Pages" required>
+            </div>
+            <div id="add-book-read">
+                <label for="book-read">Read Book?</label>
+                <input type="checkbox" id="book-read" name="Read_Book">
+            </div>
+        
+            <button id="add-book-dialog-button">Add Book</button>
+            <button id="close-book-dialog-button">Close</button>
+        </form>
+    </dialog>
+    <script src="./script.js"></script>
 </body>
 </html>

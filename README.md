@@ -15,3 +15,5 @@
 1. Set font in "#login-button" id in styles.css to be consistent with the rest of the pages
 
 
+### "Add Book" Model Display Commit
+1. Created "script.js" script file

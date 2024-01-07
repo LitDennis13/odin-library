@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    
 }
 
 
@@ -13,6 +12,7 @@ body {
     font-family: monospace;
     height: 100vh;
     width: 100vw;
+    
 }
 
 #top-bar {
@@ -125,4 +125,93 @@ body {
 }
 #book-remove-button:hover {
     background-color: rgb(150,150,150);
+}
+
+#add-book-dialog-container * {
+    font-family: monospace;
+}
+#add-book-dialog-container {
+    position: absolute;
+    left: 28.6vw;
+    top: 20vh;
+    border-radius: 4rem;
+    border: none;
+    padding: 1.4rem;
+    width: 40%;
+    margin: 0rem;
+    background-color: rgb(256,256,256,.8);
+}
+#add-book-dialog-container > h1 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#add-book-form {
+    grid-area: 2/ 1/ 3 / 2;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: .6rem;
+    padding: 0rem;
+    margin: 0rem;
+    height: auto;
+}
+
+#add-book-title, #add-book-author, #add-book-pages {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    height: 3.3rem;
+}
+#add-book-title>label, #add-book-author>label, #add-book-pages>label {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 1.35rem;
+}
+
+#add-book-title>input, #add-book-author>input, #add-book-pages>input {
+    grid-area: 2 / 1 / 3 / 2;
+    height: 1.5rem;
+    font-size: 1.35rem;
+    text-align: left;
+    width: 100%;
+    background-color: rgb(256,256,256);
+    border: none;
+}
+
+#add-book-read {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+#add-book-read>label {
+    font-size: 1.35rem;
+}
+#add-book-read>input {
+    scale: 1.4;
+}
+
+#add-book-dialog-button {
+    border-radius: 1rem;
+    height: 2.7rem;
+    border: none;
+    font-size: 2.5rem;
+    background-color: rgb(150, 23, 253);
+}
+
+#add-book-dialog-button:hover {
+    background-color: rgb(120, 3, 223);
+}
+#close-book-dialog-button {
+    border-radius: 1rem;
+    height: 1.7rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: rgb(243, 23, 140);
+}
+#close-book-dialog-button:hover {
+    background-color: rgb(213, 3, 110);
+}
+
+::backdrop {
+    background-color: rgb(0,0,0,.3);
 }
