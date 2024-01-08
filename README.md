@@ -17,3 +17,7 @@
 
 ### "Add Book" Model Display Commit
 1. Created "script.js" script file
+
+
+### "Add Book" Functionality Commit
+1. 

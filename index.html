@@ -17,34 +17,27 @@
         <button id="add-book-button">Add Book</button>
     </div>
     <div id="book-storage">
-        <div id="book">
-            <h2 id="book-title">Harry Potter</h2>
-            <h3 id="book-author"> By Author Name</h3>
-            <h3 id="book-pages">300 Pages</h3>
-            <button id="book-read-button" class="read">Read</button>
-            <button id="book-remove-button">Remove</button>
-        </div>
     </div>
     
 
     <dialog id="add-book-dialog-container">
         <h1>Add Book</h1>
-        <form action="#" method="dialog" id="add-book-form">
+        <form id="add-book-form" method="dialog">
             <div id="add-book-title">
-                <label for="book-title">Title</label>
-                <input type="text" id="book-title" name="Book_Title" required>
+                <label for="book-title-form">Title</label>
+                <input type="text" id="book-title-form" name="Book_Title" required>
             </div>
             <div id="add-book-author">
-                <label for="book-author">Author</label>
-                <input type="text" id="book-author" name="Book_Author" required>
+                <label for="book-author-form">Author</label>
+                <input type="text" id="book-author-form" name="Book_Author" required>
             </div>
             <div id="add-book-pages">
-                <label for="book-pages">Pages</label>
-                <input type="number" min="1" id="book-pages" name="Book Pages" required>
+                <label for="book-pages-form">Pages</label>
+                <input type="number" min="1" max="21500" id="book-pages-form" name="Book Pages" required>
             </div>
             <div id="add-book-read">
-                <label for="book-read">Read Book?</label>
-                <input type="checkbox" id="book-read" name="Read_Book">
+                <label for="book-read-form">Read Book?</label>
+                <input type="checkbox" id="book-read-form" name="Read_Book">
             </div>
         
             <button id="add-book-dialog-button">Add Book</button>
