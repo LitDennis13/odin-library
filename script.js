@@ -33,7 +33,7 @@ closeBookDialog.addEventListener("click", (event) => {
 let bookNames = [];
 
 let bookStorageHTML = document.querySelector("#book-storage");
-let bookStorageJS = [{title:"Harry Potter",author:"Author Name",pages: 300, read: true}];
+let bookStorageJS = [{title:"Harry Potter",author:"Author Name",pages: 300, read: true},{title:"Potter",author:"Author",pages: 87, read: false},{title:"Harry",author:"Name",pages: 286, read: true}];
 
 function Book(title,author,pages,read,id) {
     this.title = title;
@@ -105,7 +105,52 @@ addBookBar.addEventListener("click", () => {
 });
 
 
+
+
+
+bookStorageHTML.addEventListener("click", (event) => {
+    let target = event.target;
+    if (target.id === "book-read-button") {
+        if (target.classList == "read") {
+            target.textContent = "Not read";
+            target.classList = "not-read";
+            updateBookJS(target.parentNode.querySelector("#book-title").textContent,false);
+        }
+        else {
+            target.textContent = "Read";
+            target.classList = "read";
+            updateBookJS(target.parentNode.querySelector("#book-title").textContent,true);
+        }
+    }
+});
+function updateBookJS(bookTitle,read) {
+    for (const book of bookStorageJS) {
+        if (book.title === bookTitle) {
+            book.read = read;
+            return;
+        }
+    }
+}
+
+
+bookStorageHTML.addEventListener("click", (event) => {
+    let target = event.target;
+    if (target.id === "book-remove-button") {
+        removeBook(target.parentNode.querySelector("#book-title").textContent);
+    }
+});
+
+function removeBook(bookTitle) {
+    let amountOfBooks = bookStorageJS.length;
+    
+    for (let i = 0; i < amountOfBooks;i++) {
+        if (bookStorageJS[i].title === bookTitle) {
+            bookStorageJS.splice(i,1);
+            refreshBookStorage();
+            break;
+        }
+    }
+}
+
 // ### Left to do ###
-// 1. implement read/not read button functionality
-// 2. implement remove button functionality
-// 3. Top bars shrinking  as books are added
+// 2. Top bars shrinking as books are added
