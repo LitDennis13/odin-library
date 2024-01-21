@@ -35,12 +35,15 @@ let bookNames = [];
 let bookStorageHTML = document.querySelector("#book-storage");
 let bookStorageJS = [];
 
-function Book(title,author,pages,read,id) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title,author,pages,read,id) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
+
 
 function refreshBookNames() {
     bookNames = [];
